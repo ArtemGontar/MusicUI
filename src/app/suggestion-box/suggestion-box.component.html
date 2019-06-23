@@ -1,0 +1,28 @@
+<div class="suggestion-box">
+  <div class="suggestion-box__wrapper">
+      <div class="suggestion-box__header">
+        Listen music
+      </div>
+      <div class="suggestion-box__description">
+        Suggestions based on what you've liked or played
+      </div>
+  </div>
+  <div class="suggestion-box__container">
+    <button class="suggestion-box__button__back" (click)="onBackButtonClick()">Back</button>
+    <button class="suggestion-box__button__next" (click)="onNextButtonClick()">Next</button>
+    <div class="suggestion-box__item" *ngFor='let song of songs' data-id="{{ song.id }}" (click)="onSelectSong($event)">
+      <div class="suggestion-box__item__artwork">
+          <img [src]="song.artwork" alt="">
+      </div>
+      <div class="suggestion-box__item__artistName">
+          {{song.artistName}}
+      </div>
+      <div class="suggestion-box__item__name">
+          {{song.name}}
+      </div>
+    </div>
+  </div>
+</div>
+<audio id="AudioSong" controls>
+    <source src="/assets/music/Баста - Моя Игра.mp3">
+</audio>

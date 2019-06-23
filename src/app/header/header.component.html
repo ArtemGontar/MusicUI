@@ -1,0 +1,5 @@
+<div class="header__container">
+  <div class="header__item" *ngFor="let menuElement of menuElements" [ngClass]="menuElement.className">
+      {{ menuElement.name }}
+  </div>
+</div>

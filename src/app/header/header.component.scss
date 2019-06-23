@@ -1,0 +1,37 @@
+.header__container {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    box-shadow: 1px 1px 10px; 
+    .header__item {
+        min-width: 70px;
+        height: 100px;
+        margin-right: 10px; 
+        font-size: 30px;
+        display: flex;
+        align-items: center;    
+        justify-content: center;
+        &:nth-child(2n){
+            background-color: #D9C8C8;
+        }
+
+        &__home, &__library, &__stream {
+            width: 200px;
+        }
+
+        &__search {
+            width: 750px;
+        }
+
+        &__account {
+            width: 280px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+}
+
+
