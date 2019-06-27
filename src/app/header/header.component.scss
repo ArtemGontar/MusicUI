@@ -1,20 +1,33 @@
 .header__container {
-    display: flex;
     height: 100px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    box-shadow: 1px 1px 10px; 
+    box-shadow: 1px 1px 10px;
+    background: linear-gradient(180deg, #D2CEE4 0%, #F1F1F1 100%); 
+    &__wrapper {
+        width: 1620px;
+        display: flex;
+        align-items: center;
+        
+        
+    }
     .header__item {
+        background: #D1CADC;
         min-width: 70px;
         height: 100px;
-        margin-right: 10px; 
+        margin-right: 2px; 
         font-size: 30px;
         display: flex;
         align-items: center;    
         justify-content: center;
-        &:nth-child(2n){
-            background-color: #D9C8C8;
+        
+        &:hover{
+            cursor: pointer;
+            background: #DDD7E8;
+            box-shadow: 1px 0px 10px, -1px 0 10px;
+            z-index: 2;
         }
-
         &__home, &__library, &__stream {
             width: 200px;
         }

@@ -62,6 +62,17 @@ export class SuggestionBoxComponent implements OnInit {
     name: 'Моя Игра',
     url: '/assets/music/Баста - Моя Игра.mp3',
     releaseDate: new Date('2018-10-10')
+  },
+  {
+    id: 6,
+    albumName: '6',
+    artistName: '1 kla$',
+    artwork: '/assets/img/1_klass.jpg',
+    durationInMillis: 10,
+    genreNames: '6',
+    name: 'На все сто',
+    url: '/assets/music/1_klas.mp3',
+    releaseDate: new Date('2018-10-10')
   }
 ];
 
