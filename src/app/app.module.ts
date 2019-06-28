@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { SuggestionBoxComponent } from './suggestion-box/suggestion-box.component';
 import { PlayerComponent } from './player/player.component';
+import { AuthorizationComponent } from './authorization/authorization.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     SuggestionBoxComponent,
-    PlayerComponent
+    PlayerComponent,
+    AuthorizationComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
