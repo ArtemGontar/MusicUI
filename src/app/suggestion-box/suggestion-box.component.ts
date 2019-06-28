@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Song } from '../song';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'app-suggestion-box',
@@ -76,43 +77,36 @@ export class SuggestionBoxComponent implements OnInit {
   }
 ];
 
-  constructor() { }
+  sharedService: SharedService;
+
+  constructor(sharedService: SharedService) {
+    this.sharedService = sharedService;
+  }
 
   ngOnInit() {
   }
 
   onSelectSong(event) {
-    var elem = event.target.closest('.suggestion-box__item');
-    console.log(elem.id);
-    var currentSong = this.songs[elem.id - 1];//this.songs.find(x => x.id = parseInt(elem.id));
+    const elem = event.target.closest('.suggestion-box__item');
+    const currentSong = this.songs[elem.id - 1];
     document.querySelector('audio').src = currentSong.url;
+    this.sharedService.change(currentSong.artistName, currentSong.name);
   }
 
   onNextButtonClick() {
-    var container = document.querySelector('.suggestion-box__container');
-    this.sideScroll(container,'right',15,500,20);
+    const container = document.querySelector('.suggestion-box__container');
+    this.sideScroll(container, 'right', 15, 500, 20);
   }
 
   onBackButtonClick() {
-    var container = document.querySelector('.suggestion-box__container');
+    const container = document.querySelector('.suggestion-box__container');
     this.sideScroll(container,'left',15,500,20);
   }
-  // var button = document.getElementById('slide');
-  // button.onclick = function () {
-  //     var container = document.getElementById('container');
-  //     sideScroll(container,'right',25,100,10);
-  // };
-
-  // var back = document.getElementById('slideBack');
-  // back.onclick = function () {
-  //     var container = document.getElementById('container');
-  //     sideScroll(container,'left',25,100,10);
-  // };
 
   sideScroll(element,direction,speed,distance,step){
-      var scrollAmount = 0;
-      var slideTimer = setInterval(function(){
-          if(direction == 'left'){
+      let scrollAmount = 0;
+      const slideTimer = setInterval(function(){
+          if(direction === 'left'){
               element.scrollLeft -= step;
           } else {
               element.scrollLeft += step;

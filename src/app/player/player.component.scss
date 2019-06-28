@@ -49,21 +49,25 @@
 
         .player__main {
             display: flex;
-            flex-direction: row;
-            align-items: center;
+            flex-direction: column;
             margin: 0 10px;
             font-size: 20px;
-
-            .player__default-bar {
-                width: 900px;
-                margin: 0 20px;    
-                height: 3px;
-                cursor: pointer;
-                background-color:  #B89EDA;
-                .player__progress-bar {
-                    background-color: #8651CA;
-                    width: 0;
+            .player__bar {
+                display: flex;
+                margin-top: 10px; 
+                flex-direction: row;
+                align-items: center;
+                .player__default-bar {
+                    width: 900px;
+                    margin: 0 20px;    
                     height: 3px;
+                    cursor: pointer;
+                    background-color:  #B89EDA;
+                    .player__progress-bar {
+                        background-color: #8651CA;
+                        width: 0;
+                        height: 3px;
+                    }
                 }
             }
         }

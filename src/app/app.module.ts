@@ -8,6 +8,7 @@ import { SuggestionBoxComponent } from './suggestion-box/suggestion-box.componen
 import { PlayerComponent } from './player/player.component';
 import { AuthorizationComponent } from './authorization/authorization.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { SharedService } from './shared.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { RegistrationComponent } from './registration/registration.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [SharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
