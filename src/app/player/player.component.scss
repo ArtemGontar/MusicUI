@@ -1,0 +1,86 @@
+.player__wrapper {
+    width: 1920px;
+    height: 60px;
+    position: fixed;
+    bottom: 0;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F1F1F1 0%, #D2CEE4 100%);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .player__container {
+        width: 1620px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;   
+        margin-top: 10px;
+        margin-left: 70px;  
+        .player__buttons{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 150px;
+            
+            &__play {
+                border: 0;
+                padding: 0;
+                background-color: transparent;
+            }
+
+            &__prev, &__next  {
+                padding: 0;
+                border: 0;
+                width: 34px;
+                height: 34px;
+                background-color: transparent;
+            }
+            
+
+            &__mute {
+                border: 0;
+                width: 30px;
+                height: 30px;
+                background-color: white;
+                background-image: url("data:image/svg+xml,%3Csvg width='32' height='34' viewBox='0 0 22 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 13.656V30.0432H9.77778L22 43.6992V0L9.77778 13.656H0Z' fill='%238651CA'/%3E%3C/svg%3E ");
+                background-size: cover;
+            }
+        }
+
+        .player__main {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 0 10px;
+            font-size: 20px;
+
+            .player__default-bar {
+                width: 900px;
+                margin: 0 20px;    
+                height: 3px;
+                cursor: pointer;
+                background-color:  #B89EDA;
+                .player__progress-bar {
+                    background-color: #8651CA;
+                    width: 0;
+                    height: 3px;
+                }
+            }
+        }
+        
+        .player__buttons-ext{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 200px;
+            
+            &__mute, &__repeat, &__like {
+                margin: 10px;
+                border: 0;
+                background-color: transparent;
+            }
+        }
+    }
+}
+

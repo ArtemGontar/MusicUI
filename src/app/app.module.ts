@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { SuggestionBoxComponent } from './suggestion-box/suggestion-box.component';
+import { PlayerComponent } from './player/player.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    SuggestionBoxComponent
+    SuggestionBoxComponent,
+    PlayerComponent
   ],
   imports: [
     BrowserModule,

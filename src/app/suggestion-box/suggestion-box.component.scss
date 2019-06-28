@@ -29,7 +29,7 @@
         &::-webkit-scrollbar{
         width: 0px; 
         }
-        height: 520px;
+        height: 540px;
         &__buttons__wrapper {
 
         }
@@ -52,7 +52,7 @@
         }
 
         &__artistName, &__name, &__artwork {
-            margin-bottom: 10px;
+            
             min-height: 40px;
         }
 
@@ -61,23 +61,30 @@
             background-size: cover;
             height: 400px;
             width: 100%;
+            margin-bottom: 10px;
         }
     }
-    &__button__next {
+    &__button__next, &__button__back {
         position: absolute;
-        width: 50px;
-        height: 50px;
+        width: 65px;
+        height: 65px;
         z-index: 2;
-        right: 15px;
         top: 160px;
+        background-color: white;
+        border: 1px solid #B299D1;
+        color: #B299D1;
+    }
+    &__button__next {
+        right: 15px;
+        &::after{
+            content: '>';
+        }
     }
     &__button__back {
-        position: absolute;
-        width: 50px;
-        height: 50px;
         left: 15px;
-        z-index: 2;
-        top: 160px;
+        &::after{
+            content: '<';
+        }
     }
 }
 

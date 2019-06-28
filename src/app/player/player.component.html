@@ -1,0 +1,32 @@
+<audio id="AudioSong" preload="metadata">
+    <source src="/assets/music/1_klas.mp3">
+</audio>
+  
+<div class="player__wrapper">
+  <div class="player__container">
+      <div class="player__buttons">
+        <button type="button" class="player__buttons__prev"><img src="data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 35 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M34.5 0.731995L10.0625 18.2625L34.5 35.793L34.5 0.731995ZM5.75 35.793L5.75 0.731992L3.01609e-06 0.731992L0 35.793L5.75 35.793Z' fill='%238651CA'/%3E%3C/svg%3E "></button>
+        <button type="button" class="player__buttons__play" (click)="playOrPause()"><img src="data:image/svg+xml,%3Csvg width='34' height='34' viewBox='0 0 69 70' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M34.7499 0.455078C15.8899 0.455078 0.583252 16.0106 0.583252 35.1773C0.583252 54.344 15.8899 69.8995 34.7499 69.8995C53.6099 69.8995 68.9166 54.344 68.9166 35.1773C68.9166 16.0106 53.6099 0.455078 34.7499 0.455078ZM27.9166 50.8023V19.5523L48.4166 35.1773L27.9166 50.8023Z' fill='%238651CA'/%3E%3C/svg%3E%0A"></button>
+        <button type="button" class="player__buttons__next"><img src="data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 35 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.25 35.2162L24.6875 17.6858L0.25 0.155273V35.2162ZM29 0.155273V35.2162H34.75V0.155273H29Z' fill='%238651CA'/%3E%3C/svg%3E "></button>
+        <!-- <button type="button" class="player__buttons__mute" (click)="muteOrUnmute()"><img src="data:image/svg+xml,%3Csvg width='69' height='70' viewBox='0 0 69 70' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M34.7499 0.455078C15.8899 0.455078 0.583252 16.0106 0.583252 35.1773C0.583252 54.344 15.8899 69.8995 34.7499 69.8995C53.6099 69.8995 68.9166 54.344 68.9166 35.1773C68.9166 16.0106 53.6099 0.455078 34.7499 0.455078ZM27.9166 50.8023V19.5523L48.4166 35.1773L27.9166 50.8023Z' fill='%238651CA'/%3E%3C/svg%3E%0A"></button> -->
+      </div>
+      <div class="player__main">
+        <div class="player__current-time">0:00</div>
+        <div class="player__default-bar" (click)="clickedBar($event)">
+            <div class="player__progress-bar"></div>
+        </div>
+        <div class="player__full-time">0:00</div>
+      </div>
+      <div class="player__buttons-ext">
+          <button type="button" class="player__buttons-ext__mute" (click)="muteOrUnmute()"><img src="data:image/svg+xml,%3Csvg width='20' height='22' viewBox='0 0 50 49' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 16.1192V32.8808H11.1111L25 46.8489V2.15108L11.1111 16.1192H0ZM37.5 24.5C37.5 19.5553 34.6667 15.309 30.5556 13.2417V35.7303C34.6667 33.691 37.5 29.4447 37.5 24.5ZM30.5556 0V5.75485C38.5833 8.15735 44.4444 15.6442 44.4444 24.5C44.4444 33.3558 38.5833 40.8426 30.5556 43.2451V49C41.6944 46.4578 50 36.4567 50 24.5C50 12.5433 41.6944 2.54219 30.5556 0Z' fill='%238651CA'/%3E%3C/svg%3E "></button>
+          <button type="button" class="player__buttons-ext__repeat"><img src="data:image/svg+xml,%3Csvg width='20' height='22' viewBox='0 0 44 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.77778 11H34.2222V17.6L44 8.8L34.2222 0V6.6H4.88889V19.8H9.77778V11ZM34.2222 33H9.77778V26.4L0 35.2L9.77778 44V37.4H39.1111V24.2H34.2222V33Z' fill='%238651CA'/%3E%3C/svg%3E "></button>
+          <button type="button" class="player__buttons-ext__like"><img src="data:image/svg+xml,%3Csvg width='20' height='22' viewBox='0 0 47 45' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M45.9256 13.524C45.2688 6.2664 40.1514 1.00087 33.7472 1.00087C29.4805 1.00087 25.5739 3.30568 23.3757 6.99963C21.1974 3.2579 17.4509 1 13.2527 1C6.8493 1 1.73109 6.26553 1.07509 13.5231C1.02316 13.8437 0.810264 15.5308 1.45761 18.2822C2.39056 22.2506 4.5455 25.8603 7.68791 28.7185L23.3653 43L39.3119 28.7194C42.4543 25.8603 44.6093 22.2515 45.5422 18.2822C46.1896 15.5317 45.9767 13.8446 45.9256 13.524ZM43.8572 17.8843C43.0056 21.5087 41.0316 24.8109 38.154 27.4276L23.3757 40.663L8.85106 27.431C5.96828 24.8091 3.99508 21.5078 3.14262 17.8834C2.52989 15.2797 2.78173 13.8089 2.7826 13.7994L2.79558 13.7116C3.35812 7.35321 7.75541 2.73751 13.2527 2.73751C17.309 2.73751 20.8798 5.23953 22.5743 9.26621L23.3714 11.1627L24.1685 9.26621C25.8362 5.30121 29.5956 2.73838 33.748 2.73838C39.2444 2.73838 43.6426 7.35408 44.2164 13.795C44.2181 13.8089 44.47 15.2806 43.8572 17.8843Z' fill='%238651CA' stroke='%238651CA' stroke-width='2'/%3E%3C/svg%3E "></button>
+      </div>
+  </div>
+</div>
+
+<script>
+  
+  myTrack.play();
+
+</script>

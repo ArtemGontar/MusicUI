@@ -9,8 +9,8 @@
       </div>
   </div>
   <div class="suggestion-box__container__buttons">
-    <button class="suggestion-box__button__back" (click)="onBackButtonClick()">Back</button>
-    <button class="suggestion-box__button__next" (click)="onNextButtonClick()">Next</button>
+    <button class="suggestion-box__button__back" (click)="onBackButtonClick()"></button>
+    <button class="suggestion-box__button__next" (click)="onNextButtonClick()"></button>
     
     <div class="suggestion-box__container">
       <div class="suggestion-box__item" *ngFor='let song of songs' data-id="{{ song.id }}" (click)="onSelectSong($event)">
@@ -27,6 +27,4 @@
   </div>
 </div>
 
-  <audio id="AudioSong" controls>
-      <source src="/assets/img/1_klass.jpg">
-  </audio>
+
