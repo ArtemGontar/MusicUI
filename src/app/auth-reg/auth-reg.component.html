@@ -1,0 +1,18 @@
+<div class="autarization__wrapper">
+  <div class="autarization__container">
+    <div class="autarization__header-tabs">
+      <div [ngStyle]="!isAuthOrReg && {'backgroundColor': '#9dbbd6'}" class="autarization__header-tabs__sign-in" (click)="this.isAuthOrReg = true" routerLink="/authorization">
+        <div class="autarization__header-tabs__sign-up__text">
+          Sign in
+        </div>
+      </div>
+      <div [ngStyle]="isAuthOrReg && {backgroundColor: '#9dbbd6'}" class="autarization__header-tabs__sign-up" (click)="this.isAuthOrReg = false" routerLink="/registration">
+        <div class="autarization__header-tabs__sign-up__text">
+          Sign up
+        </div>
+      </div>
+    </div>
+    
+  <router-outlet></router-outlet>
+  </div>
+</div>
