@@ -1,6 +1,6 @@
 import { Component, OnInit} from '@angular/core';
-import { SuggestionBoxComponent } from '../suggestion-box/suggestion-box.component';
-import {SharedService} from '../shared.service';
+import { SuggestionBoxComponent } from '../home/suggestion-box/suggestion-box.component';
+import {SharedService} from '../../shared.service';
 
 @Component({
   selector: 'app-player',

@@ -1,32 +1,27 @@
-<div class="autarization__form__container">
-  <form class="autarization__form">
-    <div class="autarization__form-input__nickname">
-        <input type="text" placeholder="Your name">
-        <i class="autarization__user" aria-hidden="true"></i>
+<div class="registration__form__container">
+  <form class="registration__form">
+    <div class="registration__form-input input__nickname">
+        <input type="text" placeholder="Nickname">
+        <i class="registration__user" aria-hidden="true"></i>
     </div>
-    <div class="autarization__form-input__password">
+    <div class="registration__form-input input__email">
+      <input type="text" placeholder="E-mail">
+      <i class="registration__email" aria-hidden="true"></i>
+    </div>
+    <div class="registration__form-input input__password">
       <input type="password" placeholder="Password" />
-      <i class="autarization__key"></i>
+      <i class="registration__key"></i>
     </div>
-    <div class="autarization__form-input__submit">
-        <input type="submit" value="Sign in"/>
-      </div>
-    <div class="autarization__form-wrapper">
-      <h2><span>or</span></h2>
+    <div class="registration__form-input input__confirm-password">
+      <input type="password" placeholder="Confirm Password" />
+      <i class="registration__repeat"></i>
     </div>
-    <div class="autarization__form__o-auth">
-      <div class="autarization__form__o-auth-vk">
-
-      </div>
-      <div class="autarization__form__o-auth-google">
+    <div class="registration__form-input input__submit" routerLink="/authorization">
+        <input type="submit" value="Sign up"/>
         
       </div>
-      <div class="autarization__form__o-auth-facebook">
-      
-      </div>
-      <div class="autarization__form__o-auth-mail">
-    
-      </div>
+    <div class="registration__form__policy">
+        By clicking the Sign Up button you agree to out Terms & Codnditions and Privacy Policy
     </div>
   </form>
 </div>

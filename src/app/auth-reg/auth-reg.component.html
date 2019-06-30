@@ -1,18 +1,17 @@
-<div class="autarization__wrapper">
-  <div class="autarization__container">
-    <div class="autarization__header-tabs">
-      <div [ngStyle]="!isAuthOrReg && {'backgroundColor': '#9dbbd6'}" class="autarization__header-tabs__sign-in" (click)="this.isAuthOrReg = true" routerLink="/authorization">
-        <div class="autarization__header-tabs__sign-up__text">
+<div class="authorization__wrapper">
+  <div class="authorization__container">
+    <div class="authorization__header-tabs">
+      <div [ngStyle]="!isAuthOrReg && {'background': 'linear-gradient(102.54deg, rgba(88, 45, 143, 0.24) 0%, rgba(177, 168, 188, 0.24) 100%)'}" class="authorization__header-tabs__sign-in" (click)="this.isAuthOrReg = true" routerLink="/authorization">
+        <div class="authorization__header-tabs__sign-up__text">
           Sign in
         </div>
       </div>
-      <div [ngStyle]="isAuthOrReg && {backgroundColor: '#9dbbd6'}" class="autarization__header-tabs__sign-up" (click)="this.isAuthOrReg = false" routerLink="/registration">
-        <div class="autarization__header-tabs__sign-up__text">
+      <div [ngStyle]="isAuthOrReg && {background: 'linear-gradient(102.54deg, rgba(88, 45, 143, 0.24) 0%, rgba(177, 168, 188, 0.24) 100%)'}" class="authorization__header-tabs__sign-up" (click)="this.isAuthOrReg = false" routerLink="/registration">
+        <div class="authorization__header-tabs__sign-up__text">
           Sign up
         </div>
       </div>
     </div>
-    
   <router-outlet></router-outlet>
   </div>
 </div>

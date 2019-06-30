@@ -1,11 +1,11 @@
-.autarization__form__container {
+.registration__form__container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100%;
     margin-top: 30px;
-    .autarization__form {
+    .registration__form {
         width: 600px;
         height: 600px;
         display: flex;
@@ -13,7 +13,7 @@
         align-items: center;
         justify-content: center;
 
-        &-input__nickname, &-input__password, &-input__submit,
+        &-input, &-input, &-input,
         &-wrapper, &__o-auth {
             display: flex;
             flex-direction: column;
@@ -35,7 +35,8 @@
             }
         }
 
-        &-input__password, &-input__nickname {
+        & .input__password, .input__nickname,
+         .input__email, .input__confirm-password {
             position: relative;
             input {
                 padding-left: 60px;
@@ -44,22 +45,30 @@
             i {
                 position: absolute;
                 left: 45px;
-                top: 25px;
+                top: 20px;
                 padding: 8px 15px;
                 color: #aaa;
                 transition: 0.3s;
 
-                &.autarization__key::before {
-                    content: url("data:image/svg+xml,%3Csvg width='30' height='16' viewBox='0 0 30 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.8864 5.33333C14.7682 2.22667 11.7409 0 8.18182 0C3.66818 0 0 3.58667 0 8C0 12.4133 3.66818 16 8.18182 16C11.7409 16 14.7682 13.7733 15.8864 10.6667H21.8182V16H27.2727V10.6667H30V5.33333H15.8864ZM8.18182 10.6667C6.68182 10.6667 5.45455 9.46667 5.45455 8C5.45455 6.53333 6.68182 5.33333 8.18182 5.33333C9.68182 5.33333 10.9091 6.53333 10.9091 8C10.9091 9.46667 9.68182 10.6667 8.18182 10.6667Z' fill='%23B5B5B5'/%3E%3C/svg%3E ")
+                &.registration__key::before {
+                    content: url("../../../assets/img/auth/key.svg");
                 }
 
-                &.autarization__user::before {
-                    content: url("data:image/svg+xml,%3Csvg width='30' height='29' viewBox='0 0 30 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 14.5C19.1437 14.5 22.5 11.2556 22.5 7.25C22.5 3.24437 19.1437 0 15 0C10.8562 0 7.5 3.24437 7.5 7.25C7.5 11.2556 10.8562 14.5 15 14.5ZM15 18.125C9.99375 18.125 0 20.5537 0 25.375V29H30V25.375C30 20.5537 20.0063 18.125 15 18.125Z' fill='%23B5B5B5'/%3E%3C/svg%3E%0A")
+                &.registration__user::before {
+                    content: url("../../../assets/img/auth/nickname.svg");
+                }
+
+                &.registration__email::before {
+                    content: url("../../../assets/img/auth/E-mail.svg");
+                }
+
+                &.registration__repeat::before {
+                    content: url("../../../assets/img/auth/repeat.svg");
                 }
             }
         }
 
-        &-input__submit {
+        & .input__submit {
             input {
                 width: 460px;
                 background-color: #8651CA;
@@ -83,36 +92,13 @@
             }
         }
 
-        &__o-auth {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-
-            &-facebook, &-vk, &-google, &-mail {
-                width: 80px;
-                height: 80px;
-                margin: 0 20px;
-                border-radius: 50%;
-                background-size: cover;
-                cursor: pointer;
-            }
-
-            &-google {
-                background-image: url('/assets/img/auth/google.svg') 
-            }
-
-            &-facebook {
-                background-image: url('/assets/img/auth/facebook.svg');
-            }
-
-            &-vk {
-                background-image: url('/assets/img/auth/vk.svg');
-            }
-
-            &-mail {
-                background-image: url('/assets/img/auth/twitter.svg');
-            }
+        &__policy {
+            font-family: Avenir Next;
+            margin: 0 10px;
+            padding: 0 45px;
+            text-align: center;
+            font-size: 20px;
+            color: #373737;
         }
     }
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Song } from '../song';
-import { SharedService } from '../shared.service';
+import { Song } from '../../../song';
+import { SharedService } from '../../../shared.service';
 
 @Component({
   selector: 'app-suggestion-box',
