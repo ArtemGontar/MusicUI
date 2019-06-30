@@ -1,0 +1,104 @@
+.registration__form__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-top: 30px;
+    .registration__form {
+        width: 600px;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &-input, &-input, &-input,
+        &-wrapper, &__o-auth {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 0;
+            width: 550px;
+            height: 100px;
+            font-size: 30px;
+            
+            input {
+                //background: #FEFBFF;
+                font-family: Avenir Next;
+                font-size: 24px;
+                border: 0;
+                width: 400px;
+                height: 60px;
+                
+            }
+        }
+
+        & .input__password, .input__nickname,
+         .input__email, .input__confirm-password {
+            position: relative;
+            input {
+                padding-left: 60px;
+            }
+
+            i {
+                position: absolute;
+                left: 45px;
+                top: 20px;
+                padding: 8px 15px;
+                color: #aaa;
+                transition: 0.3s;
+
+                &.registration__key::before {
+                    content: url("../../../assets/img/auth/key.svg");
+                }
+
+                &.registration__user::before {
+                    content: url("../../../assets/img/auth/nickname.svg");
+                }
+
+                &.registration__email::before {
+                    content: url("../../../assets/img/auth/E-mail.svg");
+                }
+
+                &.registration__repeat::before {
+                    content: url("../../../assets/img/auth/repeat.svg");
+                }
+            }
+        }
+
+        & .input__submit {
+            input {
+                width: 460px;
+                background-color: #8651CA;
+                color: #EDEDED; 
+            }
+        }
+
+        &-wrapper {
+            h2 {
+                
+                font-family: Avenir Next;
+                font-size: 24px;
+                width:100%;
+                text-align:center;
+                border-bottom: 1px solid #807E83;
+                line-height:0.1em;
+                } 
+            h2 span {
+                background: #97b6d1;
+                padding:0 20px;
+            }
+        }
+
+        &__policy {
+            font-family: Avenir Next;
+            margin: 0 10px;
+            padding: 0 45px;
+            text-align: center;
+            font-size: 20px;
+            color: #373737;
+        }
+    }
+}
