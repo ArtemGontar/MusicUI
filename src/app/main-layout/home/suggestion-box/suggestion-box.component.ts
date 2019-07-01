@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Song } from '../../../song';
-import { SharedService } from '../../../shared.service';
+import { Song } from '../../../models/song';
+import { SharedService } from '../../../services/sharedService/shared.service';
 
 @Component({
   selector: 'app-suggestion-box',
@@ -94,25 +94,35 @@ export class SuggestionBoxComponent implements OnInit {
   }
 
   onNextButtonClick() {
-    const container = document.querySelector('.suggestion-box__container');
+    const container = document.querySelector('.suggestion-box__container__buttons');
     this.sideScroll(container, 'right', 15, 500, 20);
   }
 
   onBackButtonClick() {
-    const container = document.querySelector('.suggestion-box__container');
+    const container = document.querySelector('.suggestion-box__container__buttons');
     this.sideScroll(container,'left',15,500,20);
   }
 
   sideScroll(element,direction,speed,distance,step){
       let scrollAmount = 0;
-      const slideTimer = setInterval(function(){
+      const next: HTMLElement = document.querySelector('.suggestion-box__button__next');
+      const back: HTMLElement = document.querySelector('.suggestion-box__button__back');
+      const slideTimer = setInterval(() => {
           if(direction === 'left'){
               element.scrollLeft -= step;
           } else {
               element.scrollLeft += step;
           }
           scrollAmount += step;
-          if(scrollAmount >= distance){
+
+          if (element.scrollLeft === 0) {
+            back.style.display = 'none';
+          }
+          else {
+            back.style.display = 'block';
+          }
+
+          if(scrollAmount >= distance) {
               window.clearInterval(slideTimer);
           }
       }, speed);

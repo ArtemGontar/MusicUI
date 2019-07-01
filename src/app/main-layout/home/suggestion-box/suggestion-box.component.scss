@@ -16,25 +16,25 @@
         }
     }
 
-    &__container__buttons { 
+    &__container { 
         position: relative;
-    }
-
-    &__container {
-        display: flex;
-        margin: 0 50px;
-        flex-direction: row;
-        min-width: 500px;
-        overflow: scroll;
-        &::-webkit-scrollbar{
-        width: 0px; 
-        }
-        height: 540px;
-        &__buttons__wrapper {
-
+        &__buttons {
+            display: flex;
+            margin: 0 50px;
+            flex-direction: row;
+            min-width: 500px;
+            overflow: scroll;
+            &::-webkit-scrollbar{
+            width: 0px; 
+            }
+            height: 540px;
+    
         }
     }
+
+    
     &__item {
+        font-family: Avenir Next;
         height: 503px;
         min-width: 400px;
         margin-right: 50px;
@@ -77,13 +77,14 @@
     &__button__next {
         right: 15px;
         &::after{
-            content: '>';
+            content: url("../../../../assets/img/main/right-arrow.svg");
         }
     }
     &__button__back {
+        display: none;
         left: 15px;
         &::after{
-            content: '<';
+            content: url("../../../../assets/img/main/left-arrow.svg");
         }
     }
 }
