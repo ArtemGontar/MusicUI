@@ -16,6 +16,7 @@ import { StreamComponent } from './main-layout/stream/stream.component';
 import { FeedComponent } from './main-layout/feed/feed.component';
 import { LibraryComponent } from './main-layout/library/library.component';
 import { ChooseFavoriteComponent } from './main-layout/home/choose-favorite/choose-favorite.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { ChooseFavoriteComponent } from './main-layout/home/choose-favorite/choo
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [SharedService],
