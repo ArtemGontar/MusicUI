@@ -1,11 +1,15 @@
-export class Song {
-    id: number;
+import { Artwork } from "./artwork";
+import { Resource } from "./resource";
+
+export class Song extends Resource {
     albumName: string;
     artistName: string;
-    artwork: string;
+    artwork: Artwork;
     durationInMillis: number;
-    genreNames: string;
+    genreNames: string[];
     name: string;
+    trackNumber: number;
     url: string;
     releaseDate: Date;
+    type: string;
   }

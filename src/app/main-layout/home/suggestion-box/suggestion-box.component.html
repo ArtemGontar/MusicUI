@@ -15,6 +15,7 @@
     <div class="suggestion-box__container__buttons">
       <div class="suggestion-box__item" *ngFor='let song of songs' data-id="{{ song.id }}" (click)="onSelectSong($event)">
         <div class="suggestion-box__item__artwork">
+          <img src="{{ song.artwork.url }}" />
         </div>
         <div class="suggestion-box__item__artistName">
             {{song.artistName}}
