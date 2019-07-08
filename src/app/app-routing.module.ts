@@ -1,19 +1,20 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AuthorizationComponent } from './auth-reg/authorization/authorization.component';
-import { RegistrationComponent } from './auth-reg/registration/registration.component';
-import { HomeComponent } from './main-layout/home/home.component';
-import { FeedComponent } from './main-layout/feed/feed.component';
-import { LibraryComponent } from './main-layout/library/library.component';
-import { MainLayoutComponent } from './main-layout/main-layout.component';
+
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'feed', component: FeedComponent },
-  { path: 'library', component: LibraryComponent },
-  { path: 'authorization', component: AuthorizationComponent },
-  { path: 'registration', component: RegistrationComponent }
+  { path: '', loadChildren: './auth-reg/auth-reg.module#AuthRegModule'},
+  { path: 'home', loadChildren: './main-layout/main-layout.module#MainLayoutModule'},
+  // { path: 'main', component: MainLayoutComponent, children: [
+  //   { path: '', redirectTo: 'home', pathMatch: 'full', outlet: "main" },
+  //   { path: 'home', component: HomeComponent, outlet: "main" },
+  //   { path: 'feed', component: FeedComponent, outlet: "main" },
+  //   { path: 'library', component: LibraryComponent, outlet: "main" },
+  // ]},
+  // { path: 'auth', component: AuthRegComponent, children: [
+  //   { path: 'authorization', component: AuthorizationComponent, outlet: "auth" },
+  //   { path: 'registration', component: RegistrationComponent, outlet: "auth" }
+  // ]}
 ];
 
 @NgModule({

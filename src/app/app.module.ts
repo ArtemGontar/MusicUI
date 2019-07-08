@@ -20,25 +20,14 @@ import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    SuggestionBoxComponent,
-    PlayerComponent,
-    AuthorizationComponent,
-    RegistrationComponent,
-    AuthRegComponent,
-    MainLayoutComponent,
-    HomeComponent,
-    StreamComponent,
-    FeedComponent,
-    LibraryComponent,
-    ChooseFavoriteComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule
   ],
+  exports: [ BrowserModule ],
   providers: [SharedService],
   bootstrap: [AppComponent]
 })
