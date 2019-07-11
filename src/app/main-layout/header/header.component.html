@@ -1,7 +1,46 @@
 <div class="header__container">
   <div class="header__container__wrapper">
-    <div class="header__item" *ngFor="let menuElement of menuElements" [ngClass]="menuElement.className">
-        {{ menuElement.name }}
+    <div class="header__item item__logo" routerLink="/home">
+      <div class="header__item__logo__wrapper">
+
+      </div>
+    </div>
+    <div class="header__item item__home" routerLink="/home">
+      Home
+    </div>
+    <div class="header__item item__feed" routerLink="/feed">
+      Feed
+    </div>
+    <div class="header__item item__library" routerLink="/library">
+      Library
+    </div>
+    <div class="header__item item__search">
+      <div class="header__item__search__wrapper">
+        <input type="search" placeholder="Search" />
+        <i class="header__item__search"></i>
+      </div>
+    </div>
+    <div class="header__item item__account">
+      <div class="header__item__account__wrapper">
+        <div class="header__item__account-icon">
+
+        </div>
+        <div class="header__item__account-text">     
+          Account
+        </div>
+        <div class="header__item__account-arrow">     
+          <img src="../../../assets/img/main/bottom-arrow.svg" />
+        </div>
+      </div>
+    </div>
+    <div class="header__item item__bell-drop">
+      <div class="header__item__bell__wrapper">
+
+      </div>
+      <div class="header__item__drop__wrapper">
+
+      </div>
     </div>
   </div>
 </div>
+<router-outlet name="home"></router-outlet>

@@ -1,4 +1,5 @@
 .header__container {
+    font-family: Avenir Next;
     height: 95px;
     display: flex;
     flex-direction: column;
@@ -22,27 +23,106 @@
         align-items: center;    
         justify-content: center;
         
-        &:hover{
+        &:hover:not(.item__search):not(.item__bell-drop) {
             cursor: pointer;
             background: #DDD7E8;
             box-shadow: 1px 0px 10px, -1px 0 10px;
             z-index: 2;
         }
-        &__home, &__library, &__stream {
+
+        &.item__logo {
+            width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .header__item__logo__wrapper {
+                width: 40px;
+                height: 40px;
+                background: url("../../../assets/img/main/bicycle.svg");
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+
+        &.item__home, &.item__library, &.item__feed {
             width: 200px;
         }
 
-        &__search {
-            width: 750px;
+        &.item__search {
+            width: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .header__item__search__wrapper {
+                width: 80%;
+                position: relative;
+                input {
+                    font-family: Avenir Next;
+                    height: 50px;
+                    width: 90%;
+                    border: 0px;
+                    border-radius: 16px;
+                    padding-left: 60px;
+                }
+
+                i {
+                    position: absolute;
+                    left: 2px;
+                    top: 6px;
+                    padding: 8px 15px;
+                    color: #aaa;
+                    transition: 0.3s;
+
+                    &.header__item__search::before {
+                        content: url("../../../assets/img/main/search.svg")
+                    }
+                }
+            }
         }
 
-        &__account {
+        &.item__account {
             width: 280px;
+            .header__item__account__wrapper {
+                
+                width:95%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                .header__item__account-icon {
+                    width: 60px;
+                    height: 60px;
+                    background: url("../../../assets/img/main/ava.svg");
+                    background-repeat: no-repeat;
+                    background-size: cover;  
+                }
+    
+                .header__item__account-text {
+                    margin: 0 10px;
+                }
+            }
         }
-
-        a {
-            text-decoration: none;
-            color: black;
+        &.item__bell-drop {
+            width: 200px;
+            .header__item__bell__wrapper {
+                cursor: pointer;
+                width: 33px;
+                height: 40px;
+                background: url("../../../assets/img/main/bell.svg");
+                background-repeat: no-repeat;
+                background-size: cover;  
+                
+            }
+            .header__item__drop__wrapper {
+                cursor: pointer;
+                margin-left: 30px; 
+                width: 33px;
+                height: 40px;
+                background: url("../../../assets/img/main/drop.svg");
+                background-repeat: no-repeat;
+                background-size: cover;  
+                
+            }
         }
     }
 }
